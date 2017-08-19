@@ -1,6 +1,6 @@
+(function() {
 angular.module('primeiraApp').controller('DashboardCtrl', [
   '$http',
-  'consts',
   DashboardController
 ])
 
@@ -18,3 +18,5 @@ function DashboardController($http, consts) {
 
   vm.getSummary()
 }
+
+})()
