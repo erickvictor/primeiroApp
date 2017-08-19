@@ -1,4 +1,5 @@
-angular.module('primeiraApp').factory('gridSystem', [function() {
+(function() {
+  angular.module('primeiraApp').factory('gridSystem', [function() {
 
   function toCssClasses(numbers) {
     const cols = numbers ? numbers.split(' ') : []
@@ -14,3 +15,4 @@ angular.module('primeiraApp').factory('gridSystem', [function() {
 
   return { toCssClasses }
 }])
+})()
