@@ -13,13 +13,13 @@
 
     vm.refresh = function() {
       const page = parseInt($location.search().page) || 1
-      $http.get(`${url}?skip=${(page - 1) * 3}&limit=3`).then(function(response) {
+      $http.get(`${url}?skip=${(page - 1) * 2}&limit=2`).then(function(response) {
         vm.billingCycle = {credits: [{}], debts: [{}]}
         vm.billingCycles = response.data
         vm.calculateValues()
 
         $http.get(`${url}/count`).then(function(response) {
-          vm.pages = Math.ceil(response.value / 3)
+          vm.pages = Math.ceil(response.data.value / 2)
           tabs.show(vm, {tabList: true, tabCreate: true})
         })
       })
