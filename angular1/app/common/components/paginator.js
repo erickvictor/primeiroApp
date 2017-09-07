@@ -7,7 +7,7 @@
     controller: [
       '$location',
       function($location) {
-        this.onInit = function() {
+        this.$onInit = function() {
           var pages = parseInt(this.pages) || 1;
           this.pagesArray = Array(pages).fill(0).map((e, i) => i + 1);
 
